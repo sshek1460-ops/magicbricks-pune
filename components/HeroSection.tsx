@@ -325,11 +325,11 @@ export default function HeroSection() {
     if (prefersReducedMotion()) return;
 
     if (overlayRef.current) {
-      gsap.set(overlayRef.current, { opacity: 1 });
+      gsap.set(overlayRef.current, { opacity: 0.3 });
     }
 
     if (copyRefs.current[0]) {
-      gsap.set(copyRefs.current[0], { opacity: 1, y: 0, scale: 1 });
+      gsap.set(copyRefs.current[0], { opacity: 0 });
     }
   }, []);
 
@@ -350,7 +350,7 @@ export default function HeroSection() {
       <div
         ref={overlayRef}
         className="absolute inset-0 pointer-events-none z-[2]"
-        style={{ opacity: 1,
+        style={{ opacity: 0.3,
           background: `
             linear-gradient(180deg, rgba(23,19,15,0.3) 0%, rgba(23,19,15,0.0) 30%, rgba(23,19,15,0.0) 60%, rgba(23,19,15,0.45) 100%),
             linear-gradient(90deg, rgba(23,19,15,0.2) 0%, transparent 25%, transparent 75%, rgba(23,19,15,0.2) 100%)
@@ -594,7 +594,7 @@ export default function HeroSection() {
         ))}
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[6] flex flex-col items-center gap-3 opacity-60">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[6] flex flex-col items-center gap-3 opacity-0 pointer-events-none">
         <span
           className="uppercase font-medium"
           style={{ fontSize: "0.5625rem", letterSpacing: "0.3em", color: "var(--cloud)" }}
