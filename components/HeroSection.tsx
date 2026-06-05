@@ -331,6 +331,8 @@ export default function HeroSection() {
     if (copyRefs.current[0]) {
       gsap.set(copyRefs.current[0], { opacity: 0 });
     }
+
+    gsap.to(canvasRef.current, { opacity: 1, duration: 0.8, delay: 0.3, ease: "power2.out" });
   }, []);
 
   return (
@@ -341,9 +343,13 @@ export default function HeroSection() {
       style={{ zIndex: 10, backgroundColor: "#0a0806" }}
       aria-label="Hero — Scroll to explore"
     >
+      <div className="absolute inset-0 z-0" aria-hidden="true">
+        <img src="/images/projects/estate-01.webp" alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{ background: "rgba(5,5,5,0.35)" }} />
+      </div>
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full opacity-0"
         aria-hidden="true"
       />
 

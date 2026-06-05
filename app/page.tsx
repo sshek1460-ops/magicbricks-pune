@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
-import { initLenis, destroyLenis } from "@/lib/lenis";
+import { initLenis, destroyLenis, getLenis } from "@/lib/lenis";
 import CustomCursor from "@/components/CustomCursor";
 import Preloader from "@/components/Preloader";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
@@ -47,8 +47,14 @@ export default function Home() {
     window.addEventListener("load", onLoad, { once: true });
     const refreshTimeout = setTimeout(() => ScrollTrigger.refresh(), 800);
 
+    const scrollTimeout = setTimeout(() => {
+      const l = getLenis();
+      if (l) l.scrollTo(window.scrollY + 10, { immediate: false });
+    }, 3500);
+
     return () => {
       clearTimeout(refreshTimeout);
+      clearTimeout(scrollTimeout);
       window.removeEventListener("load", onLoad);
       if (lenisRaf) gsap.ticker.remove(lenisRaf);
       destroyLenis();
