@@ -56,6 +56,8 @@ export default function HeroSection() {
     const sy = (ch - sh) / 2;
 
     ctx.clearRect(0, 0, cw, ch);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
     ctx.drawImage(img, sx, sy, sw, sh);
   }, []);
 
@@ -64,8 +66,9 @@ export default function HeroSection() {
     if (!canvas) return;
 
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
       canvas.style.width = "100%";
       canvas.style.height = "100%";
       drawFrame(currentFrame.current);
