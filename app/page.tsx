@@ -22,6 +22,10 @@ import ServicesSection from "@/components/ServicesSection";
 import ParallaxDivider from "@/components/ParallaxDivider";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import PrivateAccessSection from "@/components/PrivateAccessSection";
+import PricingSection from "@/components/PricingSection";
+import LocationMapSection from "@/components/LocationMapSection";
+import ContactFormSection from "@/components/ContactFormSection";
+import RERAInfoBar from "@/components/RERAInfoBar";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 
@@ -80,12 +84,16 @@ export default function Home() {
         <AnthologySection />
         <SignatureAmenitiesSection />
         <StatsCounter />
+        <PricingSection />
         <MaterialsGrid />
         <ServicesSection />
         <ParallaxDivider />
         <TestimonialCarousel />
         <PrivateAccessSection />
         <FAQSection />
+        <LocationMapSection />
+        <ContactFormSection />
+        <RERAInfoBar />
         <FinalCTA />
       </main>
     </>
