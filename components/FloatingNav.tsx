@@ -77,6 +77,9 @@ export default function FloatingNav() {
             alt="AUREON"
             width={20}
             height={20}
+            quality={100}
+            priority={true}
+            unoptimized={false}
             className="opacity-70"
           />
         </button>

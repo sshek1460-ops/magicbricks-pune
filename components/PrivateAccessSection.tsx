@@ -45,6 +45,9 @@ export default function PrivateAccessSection() {
           src="/images/cancun-mexico.jpg"
           alt="Cancun Luxury Estate"
           fill
+          quality={100}
+          priority={true}
+          unoptimized={false}
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -62,6 +65,9 @@ export default function PrivateAccessSection() {
           src="/images/cancun-mexico.jpg"
           alt="Cancun Luxury Estate Clear"
           fill
+          quality={100}
+          priority={true}
+          unoptimized={false}
           className="object-cover"
         />
         <div

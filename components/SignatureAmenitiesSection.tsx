@@ -187,9 +187,11 @@ export default function SignatureAmenitiesSection() {
               src={amenity.image}
               alt={amenity.title}
               fill
+              quality={100}
+              priority={true}
+              unoptimized={false}
               className="object-cover will-change-transform"
               sizes="(max-width: 768px) 100vw, 60vw"
-              priority={i === 0}
             />
             <div className="absolute inset-0 bg-gradient-to-l from-transparent to-surface/40 z-10 pointer-events-none hidden md:block"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-surface/20 to-transparent z-10 pointer-events-none md:hidden"></div>

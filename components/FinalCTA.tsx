@@ -106,6 +106,9 @@ export default function FinalCTA() {
               alt=""
               width={40}
               height={40}
+              quality={100}
+              priority={true}
+              unoptimized={false}
               className="opacity-30"
               aria-hidden="true"
             />
@@ -153,6 +156,9 @@ export default function FinalCTA() {
               alt=""
               width={16}
               height={16}
+              quality={100}
+              priority={true}
+              unoptimized={false}
               className="opacity-20"
               aria-hidden="true"
             />

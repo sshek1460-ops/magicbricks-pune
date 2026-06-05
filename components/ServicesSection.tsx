@@ -69,6 +69,9 @@ export default function ServicesSection() {
                 src={service.image}
                 alt={service.title}
                 fill
+                quality={100}
+                priority={true}
+                unoptimized={false}
                 sizes="50vw"
                 style={{
                   objectFit: "cover",
