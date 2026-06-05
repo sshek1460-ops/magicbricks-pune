@@ -82,16 +82,17 @@ export default function Preloader() {
 
       tl.to([logoRef.current, taglineRef.current, barWrapRef.current, pctRef.current], {
         opacity: 0,
-        y: -30,
+        y: -20,
         duration: 0.6,
-        stagger: 0.08,
+        stagger: 0.06,
         ease: "power2.inOut",
-      }, 0.2)
+      }, 0)
       .to(containerRef.current, {
-        yPercent: -100,
-        duration: 1.4,
-        ease: "expo.inOut",
-      }, 0.5);
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.inOut",
+      }, 0.4)
+      .set(containerRef.current, { display: "none" });
     }
   }, [isLoaded]);
 
