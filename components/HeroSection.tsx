@@ -325,22 +325,11 @@ export default function HeroSection() {
     if (prefersReducedMotion()) return;
 
     if (overlayRef.current) {
-      gsap.set(overlayRef.current, { opacity: 0.7 });
-    }
-
-    const tl = gsap.timeline({ delay: 2.0 });
-
-    if (overlayRef.current) {
-      tl.to(overlayRef.current, { opacity: 1, duration: 1.4 }, 0);
+      gsap.set(overlayRef.current, { opacity: 1 });
     }
 
     if (copyRefs.current[0]) {
-      tl.fromTo(
-        copyRefs.current[0],
-        { opacity: 0, y: 60, scale: 0.88 },
-        { opacity: 1, y: 0, scale: 1, duration: 1.4, ease: "power3.out" },
-        0.2
-      );
+      gsap.set(copyRefs.current[0], { opacity: 1, y: 0, scale: 1 });
     }
   }, []);
 
@@ -361,7 +350,7 @@ export default function HeroSection() {
       <div
         ref={overlayRef}
         className="absolute inset-0 pointer-events-none z-[2]"
-        style={{ opacity: 0.7,
+        style={{ opacity: 1,
           background: `
             linear-gradient(180deg, rgba(23,19,15,0.3) 0%, rgba(23,19,15,0.0) 30%, rgba(23,19,15,0.0) 60%, rgba(23,19,15,0.45) 100%),
             linear-gradient(90deg, rgba(23,19,15,0.2) 0%, transparent 25%, transparent 75%, rgba(23,19,15,0.2) 100%)
