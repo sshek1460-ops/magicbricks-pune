@@ -343,8 +343,8 @@ export default function HeroSection() {
       style={{ zIndex: 10, backgroundColor: "#0a0806" }}
       aria-label="Hero — Scroll to explore"
     >
-      <div className="absolute inset-0 z-0" aria-hidden="true">
-        <img src="/images/projects/estate-01.webp" alt="" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+        <img src="/images/projects/estate-01.webp" alt="" className="w-full h-full object-cover" style={{ display: "block" }} />
         <div className="absolute inset-0" style={{ background: "rgba(5,5,5,0.35)" }} />
       </div>
       <canvas
@@ -592,6 +592,7 @@ export default function HeroSection() {
               alt=""
               className="w-full h-full object-cover"
               style={{
+                display: "block",
                 transform: i % 2 === 0 ? "scaleX(-1)" : undefined,
                 objectPosition: `center ${(i + 1) * 12}%`,
               }}

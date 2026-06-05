@@ -190,7 +190,7 @@ export default function AnthologySection() {
                     src={project.image}
                     alt={`${project.title} project`}
                     className="w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
-                    style={{ transform: hoveredIndex === i ? "scale(1.05)" : "scale(1)" }}
+                    style={{ display: "block", transform: hoveredIndex === i ? "scale(1.05)" : "scale(1)" }}
                     loading="lazy"
                   />
                 </div>
@@ -271,6 +271,7 @@ export default function AnthologySection() {
               src={project.image}
               alt={`${project.title} project`}
               className="absolute inset-0 w-full h-full object-cover"
+              style={{ display: "block" }}
               loading="lazy"
             />
             <div

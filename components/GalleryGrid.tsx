@@ -50,7 +50,7 @@ export default function GalleryGrid() {
               style={{ aspectRatio: i === 0 || i === 5 ? "16/9" : "4/5" }}
               onClick={() => setSelected(selected === i ? null : i)}
             >
-              <img src={img.src} alt={img.alt} className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110" />
+              <img src={img.src} alt={img.alt} className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110" style={{ display: "block" }} />
               <div className="absolute inset-0 bg-black/30 transition-opacity duration-500 group-hover:opacity-0" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 transition-transform duration-500 group-hover:translate-y-0 translate-y-2" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)" }}>
                 <span className="font-display text-xs tracking-[0.2em] uppercase text-white">{img.alt}</span>
@@ -72,7 +72,7 @@ export default function GalleryGrid() {
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 6L6 18M6 6L18 18" /></svg>
           </button>
-          <img src={IMAGES[selected].src} alt={IMAGES[selected].alt} className="max-w-full max-h-full object-contain rounded-sm" onClick={(e) => e.stopPropagation()} />
+          <img src={IMAGES[selected].src} alt={IMAGES[selected].alt} className="max-w-full max-h-full object-contain rounded-sm" style={{ display: "block" }} onClick={(e) => e.stopPropagation()} />
         </div>
       )}
     </section>

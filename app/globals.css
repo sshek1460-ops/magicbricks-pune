@@ -70,6 +70,18 @@ body {
   line-height: 1.6;
 }
 
+img {
+  display: block;
+  image-rendering: high-quality;
+}
+
+@media (max-width: 768px) {
+  img, .image-container, [class*="aspect-"] {
+    aspect-ratio: 16/9;
+    min-height: 220px;
+  }
+}
+
 .font-display {
   font-family: var(--font-display);
 }

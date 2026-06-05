@@ -46,7 +46,7 @@ export default function MaterialsGrid() {
               style={{ backgroundColor: "var(--ink)" }}
             >
               <div className="aspect-[4/5] relative overflow-hidden">
-                <img src={m.src} alt={m.name} className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110" />
+                <img src={m.src} alt={m.name} className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110" style={{ display: "block" }} />
                 <div className="absolute inset-0 bg-black/30 transition-opacity duration-500 group-hover:opacity-0" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%)" }}>

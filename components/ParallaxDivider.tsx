@@ -27,7 +27,7 @@ export default function ParallaxDivider() {
   return (
     <section ref={sectionRef} className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
       <div ref={imgRef} className="absolute inset-[-10%] will-change-transform">
-        <img src="/images/378443174955100855.jpg" alt="" className="w-full h-full object-cover" />
+        <img src="/images/378443174955100855.jpg" alt="" className="w-full h-full object-cover" style={{ display: "block" }} />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(5,5,5,0.55)" }} />
       </div>
       <div className="absolute inset-0 flex items-center justify-center text-center px-6">

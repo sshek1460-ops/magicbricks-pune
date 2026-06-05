@@ -40,12 +40,12 @@ export default function PrivateAccessSection() {
       ref={containerRef}
       className="relative w-full h-[80vh] md:h-screen bg-[#050505] overflow-hidden flex items-center justify-center cursor-none group"
     >
-      <div className="absolute inset-0 w-full h-full opacity-40">
+      <div className="absolute inset-0 w-full h-full opacity-40 overflow-hidden">
         <Image
           src="/images/cancun-mexico.jpg"
           alt="Cancun Luxury Estate"
           fill
-          className="object-cover blur-sm scale-105"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>

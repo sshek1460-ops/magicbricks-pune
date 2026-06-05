@@ -42,11 +42,11 @@ export default function EditorialBreak() {
     <section ref={sectionRef} className="relative w-full h-[90vh] md:h-screen overflow-hidden" style={{ backgroundColor: "#050505" }}>
       <div className="absolute inset-0 grid grid-cols-2 gap-0">
         <div ref={img1Ref} className="relative overflow-hidden will-change-transform">
-          <img src="/images/editorial/staircase.png" alt="" className="w-full h-[120%] object-cover" style={{ objectPosition: "center 30%" }} />
+          <img src="/images/editorial/staircase.png" alt="" className="w-full h-full object-cover" style={{ display: "block", objectPosition: "center" }} />
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div ref={img2Ref} className="relative overflow-hidden will-change-transform">
-          <img src="/images/editorial/living.png" alt="" className="w-full h-[120%] object-cover" style={{ objectPosition: "center 60%" }} />
+          <img src="/images/editorial/living.png" alt="" className="w-full h-full object-cover" style={{ display: "block", objectPosition: "center" }} />
           <div className="absolute inset-0 bg-black/40" />
         </div>
       </div>
